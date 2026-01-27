@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galerie - Maison Claire</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="galerie">
+    <div class="page">
+      <header class="site-header">
+        <div class="logo">Maison Claire</div>
+        <nav class="nav">
+          <a href="index.html" data-page-link="index">Accueil</a>
+          <a href="logement.html" data-page-link="logement">Le logement</a>
+          <a href="galerie.html" data-page-link="galerie">Galerie</a>
+          <a href="disponibilites.html" data-page-link="disponibilites">Disponibilites</a>
+          <a href="contact.html" data-page-link="contact">Contact</a>
+        </nav>
+        <a class="button" href="contact.html">Reserver</a>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <h1>Quelques images pour se projeter.</h1>
+            <p>
+              Remplacez ces visuels par vos propres photos. Le format paysage
+              fonctionne bien, mais vous pouvez aussi mettre des images carrees.
+            </p>
+          </div>
+          <div class="hero-card">
+            <h3>Astuce photo</h3>
+            <p>Utilisez toujours la meme lumiere pour garder une ambiance coherente.</p>
+            <a class="button secondary" href="contact.html">Recevoir le dossier photo</a>
+          </div>
+        </section>
+
+        <section class="card reveal" style="--delay: 0.1s">
+          <h2 class="section-title">Galerie</h2>
+          <div class="photo-grid">
+            <img src="assets/photos/photo-01.svg" alt="Sejour lumineux" />
+            <img src="assets/photos/photo-02.svg" alt="Chambre principale" />
+            <img src="assets/photos/photo-03.svg" alt="Terrasse" />
+            <img src="assets/photos/photo-04.svg" alt="Cuisine" />
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>Maison Claire - Location saisonniere</span>
+        <span>Copyright <span id="year"></span></span>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
