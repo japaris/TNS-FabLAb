@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TNS FabLab - Accueil</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@300;400;500;600&display=swap" />
+    <style>
+      :root {
+        --ink: #1d2528;
+        --muted: #627078;
+        --paper: #f7f2eb;
+        --accent: #e26f4a;
+        --accent-2: #2e8b7d;
+        --sun: #f3c26b;
+        --glass: rgba(255, 255, 255, 0.78);
+        --shadow: rgba(24, 32, 36, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", "Trebuchet MS", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 10% 20%, #ffe6d2 0%, transparent 45%),
+          radial-gradient(circle at 90% 10%, #d7f1ed 0%, transparent 40%),
+          linear-gradient(160deg, #fff6ee 0%, #f2f5f3 55%, #f1eee7 100%);
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(circle at 20% 20%, rgba(46, 139, 125, 0.08) 0 2px, transparent 2px 26px);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        padding: 32px 6vw 56px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 700;
+        font-size: 1.4rem;
+        letter-spacing: 0.02em;
+      }
+
+      .nav {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .nav a {
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        margin: 36px 0 44px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: clamp(2.3rem, 3vw, 3.4rem);
+        margin: 0 0 12px;
+      }
+
+      .hero p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 14px 24px -16px rgba(226, 111, 74, 0.8);
+      }
+
+      .cta.secondary {
+        background: var(--accent-2);
+        box-shadow: 0 14px 24px -16px rgba(46, 139, 125, 0.7);
+      }
+
+      .hero-card {
+        background: var(--glass);
+        border-radius: 22px;
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 18px 36px -28px var(--shadow);
+        backdrop-filter: blur(8px);
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .hero-card h3 {
+        margin: 0 0 10px;
+        font-family: "Fraunces", Georgia, serif;
+      }
+
+      .pill {
+        display: inline-flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+      }
+
+      .pill span {
+        padding: 6px 12px;
+        border-radius: 14px;
+        background: rgba(46, 139, 125, 0.15);
+        color: var(--accent-2);
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .section-title {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 1.6rem;
+        margin: 0 0 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: var(--glass);
+        border-radius: 20px;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        box-shadow: 0 18px 34px -28px var(--shadow);
+      }
+
+      .card h4 {
+        margin: 0 0 8px;
+        font-family: "Fraunces", Georgia, serif;
+      }
+
+      .card p {
+        margin: 0 0 10px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(243, 194, 107, 0.25);
+        font-size: 0.85rem;
+        color: #6b512d;
+        font-weight: 600;
+      }
+
+      .steps {
+        margin: 28px 0 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 16px;
+      }
+
+      .step {
+        padding: 16px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+      }
+
+      .step strong {
+        display: block;
+        margin-bottom: 6px;
+      }
+
+      .footer {
+        margin-top: 48px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(29, 37, 40, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      .reveal {
+        animation: fadeUp 0.8s ease both;
+        animation-delay: var(--delay, 0s);
+      }
+
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
+
+      @media (max-width: 700px) {
+        header {
+          justify-content: center;
+          text-align: center;
+        }
+
+        .hero-card {
+          animation: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="logo">TNS FabLab</div>
+        <nav class="nav">
+          <a href="#exemples">Exemples</a>
+          <a href="#demarrer">Demarrer</a>
+          <a href="exemples/claire-location/index.html">Site Claire</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <span class="badge">Atelier web pour non-dev</span>
+            <h1>Apprendre a creer un site clair, simple, et publie en ligne.</h1>
+            <p>
+              Ce depot regroupe des mini projets faciles a copier. L objectif est de
+              donner une methode, pas seulement des outils.
+            </p>
+            <a class="cta" href="exemples/claire-location/index.html">Voir un exemple</a>
+            <a class="cta secondary" href="#demarrer">Voir la methode</a>
+          </div>
+          <div class="hero-card">
+            <h3>Ce que l on apprend ici</h3>
+            <p>Un mini site multi pages, des photos, un calendrier partage, et une mise en ligne rapide.</p>
+            <div class="pill">
+              <span>HTML simple</span>
+              <span>CSS lisible</span>
+              <span>Google Calendar</span>
+            </div>
+          </div>
+        </section>
+
+        <section id="exemples">
+          <h2 class="section-title">Exemples disponibles</h2>
+          <div class="grid">
+            <article class="card reveal" style="--delay: 0.05s">
+              <h4>Maison Claire</h4>
+              <p>Mini site vitrine pour une location saisonniere. 5 pages, galerie, disponibilites.</p>
+              <a class="cta" href="exemples/claire-location/index.html">Ouvrir</a>
+            </article>
+            <article class="card reveal" style="--delay: 0.15s">
+              <h4>Prochain exemple</h4>
+              <p>Un gabarit pour un atelier ou une association. Ajout possible sur demande.</p>
+              <span class="badge">A venir</span>
+            </article>
+            <article class="card reveal" style="--delay: 0.25s">
+              <h4>Prochain exemple</h4>
+              <p>Une page simple pour presenter un projet avec inscription rapide.</p>
+              <span class="badge">A venir</span>
+            </article>
+          </div>
+        </section>
+
+        <section id="demarrer" class="reveal" style="--delay: 0.2s; margin-top: 36px;">
+          <h2 class="section-title">Demarrer en 15 minutes</h2>
+          <div class="steps">
+            <div class="step">
+              <strong>1. Copier un exemple</strong>
+              Dupliquer un dossier dans `exemples/` et renommer.
+            </div>
+            <div class="step">
+              <strong>2. Modifier textes et photos</strong>
+              Remplacer les paragraphes et les images dans les fichiers HTML.
+            </div>
+            <div class="step">
+              <strong>3. Publier</strong>
+              Utiliser GitHub Pages pour partager un lien public.
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>TNS FabLab - Atelier web</span>
+        <span>Mis a jour en 2026</span>
+      </footer>
+    </div>
+  </body>
+</html>
