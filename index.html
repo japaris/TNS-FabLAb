@@ -119,6 +119,13 @@
         box-shadow: 0 14px 24px -16px rgba(46, 139, 125, 0.7);
       }
 
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
       .hero-card {
         background: var(--glass);
         border-radius: 22px;
@@ -272,6 +279,7 @@
           <a href="#exemples">Exemples</a>
           <a href="#demarrer">Démarrer</a>
           <a href="personnaliser.html">Personnaliser</a>
+          <a href="rendezvous.html">Rendez-vous</a>
           <a href="exemples/claire-location/index.html">Site Claire</a>
         </nav>
       </header>
@@ -285,8 +293,11 @@
               Ce dépôt regroupe des mini projets faciles à copier. L'objectif est de
               donner une méthode, pas seulement des outils.
             </p>
-            <a class="cta" href="exemples/claire-location/index.html">Voir un exemple</a>
-            <a class="cta secondary" href="#demarrer">Voir la méthode</a>
+            <div class="cta-group">
+              <a class="cta" href="exemples/claire-location/index.html">Voir un exemple</a>
+              <a class="cta secondary" href="#demarrer">Voir la méthode</a>
+              <a class="cta secondary" href="rendezvous.html">Prendre rendez-vous</a>
+            </div>
           </div>
           <div class="hero-card">
             <h3>Ce que l'on apprend ici</h3>

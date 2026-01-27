@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Personnaliser un exemple - TNS FabLab</title>
+    <title>Rendez-vous - TNS FabLab</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@300;400;500;600&display=swap" />
     <style>
       :root {
@@ -86,7 +86,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
         gap: 28px;
-        margin: 36px 0 32px;
+        margin: 36px 0 24px;
         align-items: center;
       }
 
@@ -119,6 +119,13 @@
         box-shadow: 0 14px 24px -16px rgba(46, 139, 125, 0.7);
       }
 
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
       .hero-card {
         background: var(--glass);
         border-radius: 22px;
@@ -139,56 +146,25 @@
         margin: 0 0 16px;
       }
 
-      .steps {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 16px;
-      }
-
-      .step {
-        padding: 16px;
-        border-radius: 16px;
-        background: rgba(255, 255, 255, 0.7);
-        border: 1px solid rgba(255, 255, 255, 0.6);
-      }
-
-      .step strong {
-        display: block;
-        margin-bottom: 6px;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        gap: 18px;
-      }
-
-      .card {
-        background: var(--glass);
-        border-radius: 20px;
-        padding: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.65);
-        box-shadow: 0 18px 34px -28px var(--shadow);
-      }
-
-      .card h4 {
-        margin: 0 0 8px;
-        font-family: "Fraunces", Georgia, serif;
-      }
-
-      .card p,
-      .card li {
-        margin: 0 0 8px;
-        color: var(--muted);
-        line-height: 1.5;
-      }
-
       .note {
         background: rgba(243, 194, 107, 0.2);
         border-radius: 14px;
         padding: 14px 16px;
         color: #6b512d;
         font-size: 0.95rem;
+      }
+
+      .calendar {
+        border-radius: 20px;
+        overflow: hidden;
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        box-shadow: 0 20px 40px -32px var(--shadow);
+      }
+
+      .calendar iframe {
+        width: 100%;
+        min-height: 560px;
+        border: 0;
       }
 
       .footer {
@@ -217,99 +193,48 @@
         <div class="logo">TNS FabLab</div>
         <nav class="nav">
           <a href="index.html">Accueil</a>
-          <a href="rendezvous.html">Rendez-vous</a>
+          <a href="personnaliser.html">Personnaliser</a>
           <a href="exemples/claire-location/index.html">Site Claire</a>
-          <a href="#etapes">Étapes</a>
-          <a href="#checklist">Checklist</a>
+          <a href="#calendrier">Calendrier</a>
         </nav>
       </header>
 
       <main>
         <section class="hero">
           <div>
-            <h1>Personnaliser un exemple en 30 minutes.</h1>
+            <h1>Prendre rendez-vous simplement.</h1>
             <p>
-              Ce guide est fait pour les non-développeurs. Il suffit de suivre les
-              étapes ci-dessous, sans installation complexe.
+              Choisissez un créneau disponible dans le calendrier ci-dessous. Il est
+              synchronisé avec mes disponibilités.
             </p>
-            <a class="cta" href="exemples/claire-location/index.html">Ouvrir l'exemple</a>
-            <a class="cta secondary" href="index.html">Retour à l'accueil</a>
+            <div class="cta-group">
+              <a class="cta" href="#calendrier">Voir le calendrier</a>
+              <a class="cta secondary" href="index.html">Retour à l'accueil</a>
+            </div>
           </div>
           <div class="hero-card">
-            <h3>Ce dont vous avez besoin</h3>
-            <p>Un ordinateur, quelques photos et 20 à 30 minutes pour adapter le texte.</p>
-            <p>Optionnel : un calendrier Google pour les disponibilités.</p>
+            <h3>Conseil pratique</h3>
+            <p>Créez un calendrier dédié aux rendez-vous pour ne pas exposer vos événements personnels.</p>
+            <p>Indiquez uniquement les créneaux libres ou occupés.</p>
           </div>
         </section>
 
-        <section id="etapes">
-          <h2 class="section-title">Étapes clés</h2>
-          <div class="steps">
-            <div class="step">
-              <strong>1. Dupliquer un dossier</strong>
-              Copier `exemples/claire-location/` et renommer le dossier avec votre projet.
-            </div>
-            <div class="step">
-              <strong>2. Modifier les textes</strong>
-              Ouvrir les fichiers HTML et remplacer les titres et paragraphes.
-            </div>
-            <div class="step">
-              <strong>3. Remplacer les photos</strong>
-              Mettre vos images dans `assets/photos/` puis mettre à jour les balises `<img>`.
-            </div>
-            <div class="step">
-              <strong>4. Ajouter le calendrier</strong>
-              Copier le lien "Intégrer le calendrier" depuis Google Calendar et le coller dans `disponibilites.html`.
-            </div>
-            <div class="step">
-              <strong>5. Mettre vos coordonnées</strong>
-              Remplacer téléphone et email dans `contact.html`.
-            </div>
-            <div class="step">
-              <strong>6. Publier</strong>
-              Pousser sur GitHub et activer GitHub Pages pour obtenir un lien public.
-            </div>
-          </div>
+        <section class="note" style="margin-bottom: 18px;">
+          Pour afficher vos disponibilités, remplacez l'URL de l'iframe par le lien
+          "Intégrer le calendrier" de Google Calendar.
         </section>
 
-        <section id="checklist" style="margin-top: 32px;">
-          <h2 class="section-title">Checklist rapide</h2>
-          <div class="grid">
-            <article class="card">
-              <h4>Avant publication</h4>
-              <ul>
-                <li>Tous les textes relus et actualisés.</li>
-                <li>Photos légères (moins de 1 Mo chacune).</li>
-                <li>Liens testés entre les pages.</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Calendrier</h4>
-              <ul>
-                <li>Calendrier Google créé et partagé en public.</li>
-                <li>Fuseau horaire correct (ex : Europe/Paris).</li>
-                <li>URL intégrée dans l'iframe.</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Contact</h4>
-              <ul>
-                <li>Email testé et fonctionnel.</li>
-                <li>Indiquer les délais de réponse.</li>
-                <li>Option : formulaire externe (Google Forms).</li>
-              </ul>
-            </article>
-          </div>
-        </section>
-
-        <section class="note" style="margin-top: 26px;">
-          Astuce : si vous changez beaucoup de texte, faites une recherche "Maison Claire"
-          pour remplacer par le nom de votre projet dans tous les fichiers.
+        <section id="calendrier" class="calendar">
+          <iframe
+            title="Calendrier de rendez-vous"
+            src="https://calendar.google.com/calendar/embed?src=65459832607888a32ba48299f420b1ad5131ca5256e84e1f6e75a05e058e0f8f%40group.calendar.google.com&ctz=Europe%2FParis"
+            loading="lazy"
+          ></iframe>
         </section>
       </main>
 
       <footer class="footer">
-        <span>TNS FabLab - Guide de personnalisation</span>
+        <span>TNS FabLab - Rendez-vous</span>
         <span>Mis à jour en 2026</span>
       </footer>
     </div>
