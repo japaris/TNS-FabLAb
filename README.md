@@ -7,6 +7,7 @@ avec leurs propres projets, en partant d'exemples simples et modifiables.
 ## Liens
 - Accueil (GitHub Pages) : https://japaris.github.io/TNS-FabLAb/
 - Exemple Claire : https://japaris.github.io/TNS-FabLAb/exemples/claire-location/
+- Ressources : https://japaris.github.io/TNS-FabLAb/ressources.html
 
 ## Contenu
 - exemples/ : mini projets à copier et personnaliser
@@ -24,4 +25,3 @@ Serveur local (optionnel, mais recommandé pour les liens et les pages multiples
 
 ## Prochaine étape (idée)
 - Publier un exemple sur GitHub Pages pour partager le lien aux membres.
-
