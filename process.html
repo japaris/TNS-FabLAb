@@ -252,6 +252,18 @@
         font-family: "Fraunces", Georgia, serif;
       }
 
+      .questionnaire {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 18px;
+        padding: 18px;
+        border: 1px dashed rgba(226, 111, 74, 0.35);
+      }
+
+      .questionnaire li {
+        margin-bottom: 8px;
+        color: var(--muted);
+      }
+
       .footer {
         margin-top: 48px;
         padding-top: 18px;
@@ -341,6 +353,7 @@
           <a href="#strategie">Strategie</a>
           <a href="#timeline">Timeline</a>
           <a href="#maintenance">Maintenance</a>
+          <a href="#stack">Choix d'outil</a>
         </div>
 
         <section id="strategie">
@@ -358,6 +371,17 @@
               <h4>Quel succes ?</h4>
               <p>Un contact ? Une reservation ? Une inscription ? Un achat ?</p>
             </article>
+          </div>
+
+          <div class="questionnaire" style="margin-top: 18px;">
+            <h4>Mini questionnaire (a imprimer)</h4>
+            <ul class="list">
+              <li>Quel est l'objectif principal du site ?</li>
+              <li>Quelle est l'action prioritaire attendue ?</li>
+              <li>Quelles objections dois-je lever ?</li>
+              <li>Quelles preuves puis-je montrer (avis, photos, chiffres) ?</li>
+              <li>Quel est le prochain pas apres la visite ?</li>
+            </ul>
           </div>
         </section>
 
@@ -485,6 +509,36 @@
               <ul class="list">
                 <li>Renouveler le domaine</li>
                 <li>Revoir la strategie</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="stack" style="margin-top: 32px;">
+          <h2 class="section-title">Choisir sa stack selon son profil</h2>
+          <div class="grid">
+            <article class="card">
+              <h4>Debutant (vite et simple)</h4>
+              <ul class="list">
+                <li>Outil : Wix ou WordPress.com</li>
+                <li>Objectif : publier sans maintenance technique</li>
+                <li>Conseil : focus sur le contenu</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Autonome (controle + budget)</h4>
+              <ul class="list">
+                <li>Outil : site statique + GitHub Pages/Netlify</li>
+                <li>Objectif : apprendre et rester independant</li>
+                <li>Conseil : templates clairs et simples</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Pro / evolutif</h4>
+              <ul class="list">
+                <li>Outil : Webflow ou CMS</li>
+                <li>Objectif : evolutions frequentes</li>
+                <li>Conseil : budgeter maintenance + SEO</li>
               </ul>
             </article>
           </div>
