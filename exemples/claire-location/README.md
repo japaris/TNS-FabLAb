@@ -13,7 +13,7 @@ Il suffit de modifier les textes et les photos.
 
 ## Remplacer les photos
 - Mettre vos images dans `assets/photos/`.
-- Garder des noms simples (ex: `photo-01.jpg`).
+- Garder des noms simples (ex: `photo_1.jpeg`).
 - Modifier les balises `<img>` dans `galerie.html` et `index.html`.
 
 ## Mettre votre calendrier Google
@@ -28,4 +28,3 @@ Astuce : pour synchroniser avec votre ordinateur, utilisez le lien iCal privé d
 - Mettre les fichiers du site à la racine d'un dépôt.
 - Activer GitHub Pages dans Settings > Pages.
 - Choisir la branche `main` et le dossier `/`.
-

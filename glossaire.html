@@ -152,6 +152,41 @@
         gap: 16px;
       }
 
+      .az-index {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 8px 0 18px;
+      }
+
+      .az-index a,
+      .az-index span {
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      .az-index a {
+        background: rgba(46, 139, 125, 0.15);
+        color: var(--accent-2);
+      }
+
+      .az-index span {
+        background: rgba(29, 37, 40, 0.08);
+        color: var(--muted);
+      }
+
+      .letter {
+        grid-column: 1 / -1;
+        margin-top: 6px;
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 1.1rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--ink);
+      }
+
       .term {
         background: var(--glass);
         border-radius: 18px;
@@ -233,27 +268,62 @@
 
         <section>
           <h2 class="section-title">Glossaire</h2>
+          <div class="az-index" aria-label="Index A à Z">
+            <a href="#A">A</a>
+            <a href="#B">B</a>
+            <a href="#C">C</a>
+            <a href="#D">D</a>
+            <span>E</span>
+            <a href="#F">F</a>
+            <a href="#G">G</a>
+            <a href="#H">H</a>
+            <a href="#I">I</a>
+            <a href="#J">J</a>
+            <a href="#K">K</a>
+            <span>L</span>
+            <span>M</span>
+            <a href="#N">N</a>
+            <a href="#O">O</a>
+            <a href="#P">P</a>
+            <span>Q</span>
+            <span>R</span>
+            <a href="#S">S</a>
+            <span>T</span>
+            <span>U</span>
+            <a href="#V">V</a>
+            <span>W</span>
+            <a href="#X">X</a>
+            <span>Y</span>
+            <span>Z</span>
+          </div>
           <div class="glossary">
+            <div class="letter" id="A">A</div>
+            <article class="term">
+              <h4>Android Play Console</h4>
+              <p>Nom courant pour Google Play Console, plateforme de publication Android.</p>
+            </article>
             <article class="term">
               <h4>Android Studio</h4>
               <p>Environnement de développement officiel pour créer des apps Android.</p>
-            </article>
-            <article class="term">
-              <h4>App Store Connect</h4>
-              <p>Portail Apple pour publier et gérer des apps iOS/macOS.</p>
             </article>
             <article class="term">
               <h4>API</h4>
               <p>Interface qui permet à deux services d'échanger des données.</p>
             </article>
             <article class="term">
+              <h4>App Store Connect</h4>
+              <p>Portail Apple pour publier et gérer des apps iOS/macOS.</p>
+            </article>
+            <article class="term">
               <h4>Architectures d'app (MVC, MVP, MVVM)</h4>
               <p>Façons d'organiser le code d'une application pour la rendre maintenable.</p>
             </article>
+            <div class="letter" id="B">B</div>
             <article class="term">
               <h4>Backend</h4>
               <p>Partie "serveur" d'un produit (données, logique, sécurité).</p>
             </article>
+            <div class="letter" id="C">C</div>
             <article class="term">
               <h4>CDN</h4>
               <p>Réseau de serveurs qui accélère la livraison d'un site partout dans le monde.</p>
@@ -278,6 +348,7 @@
               <h4>Cursor</h4>
               <p>Éditeur de code avec fonctionnalités d'IA intégrées.</p>
             </article>
+            <div class="letter" id="D">D</div>
             <article class="term">
               <h4>DNS</h4>
               <p>Système qui relie un nom de domaine à une adresse IP.</p>
@@ -286,10 +357,12 @@
               <h4>DNSSEC</h4>
               <p>Sécurisation du DNS pour éviter les détournements.</p>
             </article>
+            <div class="letter" id="F">F</div>
             <article class="term">
               <h4>Frontend</h4>
               <p>Partie visible d'un produit (interface et expérience utilisateur).</p>
             </article>
+            <div class="letter" id="G">G</div>
             <article class="term">
               <h4>Git</h4>
               <p>Outil de versioning pour suivre l'historique des fichiers.</p>
@@ -306,6 +379,7 @@
               <h4>Google Play Console</h4>
               <p>Portail Google pour publier et gérer des apps Android (ex: Android Play Console).</p>
             </article>
+            <div class="letter" id="H">H</div>
             <article class="term">
               <h4>Hébergement</h4>
               <p>Service qui met un site en ligne sur des serveurs accessibles.</p>
@@ -318,10 +392,12 @@
               <h4>HTTP/HTTPS</h4>
               <p>Protocoles de communication web, HTTPS ajoute un chiffrement.</p>
             </article>
+            <div class="letter" id="I">I</div>
             <article class="term">
               <h4>IA en mode agent</h4>
               <p>IA capable d'enchaîner des tâches avec une certaine autonomie.</p>
             </article>
+            <div class="letter" id="J">J</div>
             <article class="term">
               <h4>Java</h4>
               <p>Langage utilisé notamment pour des applications et Android.</p>
@@ -330,22 +406,27 @@
               <h4>JavaScript</h4>
               <p>Langage qui rend un site interactif.</p>
             </article>
+            <div class="letter" id="K">K</div>
             <article class="term">
               <h4>Kotlin</h4>
               <p>Langage moderne recommandé pour Android.</p>
             </article>
+            <div class="letter" id="N">N</div>
             <article class="term">
               <h4>Nom de domaine</h4>
               <p>Adresse web lisible (ex : monsite.fr).</p>
             </article>
+            <div class="letter" id="O">O</div>
             <article class="term">
               <h4>OVH</h4>
               <p>Fournisseur d'hébergement et de noms de domaine.</p>
             </article>
+            <div class="letter" id="P">P</div>
             <article class="term">
               <h4>Programmation orientée objet</h4>
               <p>Façon d'organiser le code autour d'objets et de classes.</p>
             </article>
+            <div class="letter" id="S">S</div>
             <article class="term">
               <h4>SEA</h4>
               <p>Publicité payante sur les moteurs de recherche.</p>
@@ -366,6 +447,7 @@
               <h4>SwiftUI</h4>
               <p>Framework Apple pour créer des interfaces iOS/macOS.</p>
             </article>
+            <div class="letter" id="V">V</div>
             <article class="term">
               <h4>VPS</h4>
               <p>Serveur privé virtuel, plus flexible qu'un hébergement mutualisé.</p>
@@ -374,6 +456,7 @@
               <h4>VS Code</h4>
               <p>Éditeur de code léger et très populaire.</p>
             </article>
+            <div class="letter" id="X">X</div>
             <article class="term">
               <h4>Xcode</h4>
               <p>Environnement officiel Apple pour développer des apps iOS/macOS.</p>
