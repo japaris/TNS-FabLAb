@@ -10,8 +10,8 @@ avec leurs propres projets, en partant d'exemples simples et modifiables.
 - Ressources : https://japaris.github.io/TNS-FabLAb/ressources.html
 - Glossaire : https://japaris.github.io/TNS-FabLAb/glossaire.html
 - Confidentialite : https://japaris.github.io/TNS-FabLAb/privacy.html
-- Process A a Z : https://japaris.github.io/TNS-FabLAb/process.html
-- Pre-requis : https://japaris.github.io/TNS-FabLAb/prerequis.html
+- Process A à Z : https://japaris.github.io/TNS-FabLAb/process.html
+- Pré-requis : https://japaris.github.io/TNS-FabLAb/prerequis.html
 
 ## Contenu
 - exemples/ : mini projets à copier et personnaliser
