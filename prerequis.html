@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Rendez-vous - TNS FabLab</title>
+    <title>Pre-requis atelier - TNS FabLab</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@300;400;500;600&display=swap" />
     <style>
       :root {
@@ -114,22 +114,6 @@
         color: var(--muted);
       }
 
-      .subnav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 0 0 24px;
-      }
-
-      .subnav a {
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(226, 111, 74, 0.15);
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 0.9rem;
-      }
-
       .hero {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -150,30 +134,6 @@
         line-height: 1.6;
       }
 
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 11px 20px;
-        border-radius: 999px;
-        background: var(--accent);
-        color: #fff;
-        font-weight: 600;
-        box-shadow: 0 14px 24px -16px rgba(226, 111, 74, 0.8);
-      }
-
-      .cta.secondary {
-        background: var(--accent-2);
-        box-shadow: 0 14px 24px -16px rgba(46, 139, 125, 0.7);
-      }
-
-      .cta-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: center;
-      }
-
       .hero-card {
         background: var(--glass);
         border-radius: 22px;
@@ -188,10 +148,51 @@
         font-family: "Fraunces", Georgia, serif;
       }
 
+      .subnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 24px;
+      }
+
+      .subnav a {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(226, 111, 74, 0.15);
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
       .section-title {
         font-family: "Fraunces", Georgia, serif;
         font-size: 1.6rem;
         margin: 0 0 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 18px;
+      }
+
+      .card {
+        background: var(--glass);
+        border-radius: 20px;
+        padding: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        box-shadow: 0 18px 34px -28px var(--shadow);
+      }
+
+      .card h4 {
+        margin: 0 0 8px;
+        font-family: "Fraunces", Georgia, serif;
+      }
+
+      .list {
+        padding-left: 18px;
+        margin: 0;
+        color: var(--muted);
       }
 
       .note {
@@ -200,19 +201,6 @@
         padding: 14px 16px;
         color: #6b512d;
         font-size: 0.95rem;
-      }
-
-      .calendar {
-        border-radius: 20px;
-        overflow: hidden;
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        box-shadow: 0 20px 40px -32px var(--shadow);
-      }
-
-      .calendar iframe {
-        width: 100%;
-        min-height: 560px;
-        border: 0;
       }
 
       .footer {
@@ -260,7 +248,6 @@
               <a href="ressources.html">Ressources</a>
               <a href="glossaire.html">Glossaire</a>
               <a href="process.html">Process A a Z</a>
-              <a href="prerequis.html">Pre-requis</a>
             </nav>
           </div>
           <div class="nav-section ateliers">
@@ -277,45 +264,100 @@
       <main>
         <section class="hero">
           <div>
-            <h1>Prendre rendez-vous simplement.</h1>
+            <h1>Pre-requis pour l'atelier.</h1>
             <p>
-              Réservez un premier rendez-vous de 30 minutes via la page de réservation.
-              Les créneaux proposés sont synchronisés avec mes disponibilités.
+              Tout ce qu'il faut preparer pour que l'atelier aille vite : comptes,
+              outils et contenus de base.
             </p>
-            <div class="cta-group">
-              <a class="cta" href="https://calendar.app.google/C71WziXfLPBueyUw9" target="_blank" rel="noopener">Réserver 30 min</a>
-              <a class="cta secondary" href="#calendrier">Voir le calendrier</a>
-              <a class="cta secondary" href="index.html">Retour à l'accueil</a>
-            </div>
           </div>
           <div class="hero-card">
-            <h3>Conseil pratique</h3>
-            <p>Créez un calendrier dédié aux rendez-vous pour ne pas exposer vos événements personnels.</p>
-            <p>Indiquez uniquement les créneaux libres ou occupés.</p>
+            <h3>Objectif</h3>
+            <p>Arriver avec tout pret pour se concentrer sur le contenu et la methode.</p>
+            <p>On evite les blocages techniques.</p>
           </div>
         </section>
 
         <div class="subnav">
-          <a href="#calendrier">Calendrier</a>
+          <a href="#comptes">Comptes</a>
+          <a href="#logiciels">Logiciels</a>
+          <a href="#contenu">Contenu</a>
         </div>
 
-        <section class="note" style="margin-bottom: 18px;">
-          Le bouton "Réserver 30 min" ouvre la page de réservation Google Calendar.
-          Le calendrier ci-dessous reste en lecture seule pour afficher les disponibilités.
+        <section id="comptes">
+          <h2 class="section-title">Comptes a creer</h2>
+          <div class="grid">
+            <article class="card">
+              <h4>Compte Google</h4>
+              <ul class="list">
+                <li>Obligatoire pour Gemini Code Assist</li>
+                <li>Utile pour Google Calendar et Docs</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Compte GitHub</h4>
+              <ul class="list">
+                <li>Utile pour publier avec GitHub Pages</li>
+                <li>Optionnel si vous ne publiez pas</li>
+              </ul>
+            </article>
+          </div>
         </section>
 
-        <section id="calendrier" class="calendar">
-          <iframe
-            title="Calendrier de rendez-vous"
-            src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=Europe%2FParis&showPrint=0&src=NjU0NTk4MzI2MDc4ODhhMzJiYTQ4Mjk5ZjQyMGIxYWQ1MTMxY2E1MjU2ZTg0ZTFmNmU3NWEwNWUwNThlMGY4ZkBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&color=%233a87fe"
-            loading="lazy"
-          ></iframe>
+        <section id="logiciels" style="margin-top: 28px;">
+          <h2 class="section-title">Logiciels a installer</h2>
+          <div class="grid">
+            <article class="card">
+              <h4>VS Code</h4>
+              <ul class="list">
+                <li>Editeur gratuit et simple</li>
+                <li>Permet d'ouvrir les fichiers HTML</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Gemini Code Assist</h4>
+              <ul class="list">
+                <li>Extension VS Code</li>
+                <li>Connexion avec compte Google</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="contenu" style="margin-top: 28px;">
+          <h2 class="section-title">Contenu a apporter</h2>
+          <div class="grid">
+            <article class="card">
+              <h4>Photos</h4>
+              <ul class="list">
+                <li>5 a 10 photos</li>
+                <li>Format JPG ou PNG</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Texte</h4>
+              <ul class="list">
+                <li>Presentation courte (10-15 lignes)</li>
+                <li>Une phrase d'accroche</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Infos pratiques</h4>
+              <ul class="list">
+                <li>Coordonnees de contact</li>
+                <li>Liens utiles (calendar, formulaire)</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="note" style="margin-top: 18px;">
+          Astuce : preparer les photos dans un dossier unique pour gagner du temps.
         </section>
       </main>
 
       <footer class="footer">
-        <span>TNS FabLab - Rendez-vous</span>
-        <span>Mis à jour en 2026</span>
+        <span>TNS FabLab - Pre-requis</span>
+        <span>Mis a jour en 2026</span>
         <a href="privacy.html">Confidentialite (RGPD)</a>
       </footer>
     </div>
