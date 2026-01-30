@@ -83,10 +83,11 @@
       }
 
       .nav-wrap {
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: auto minmax(360px, 1fr);
         gap: 12px;
-        justify-content: flex-end;
+        align-items: center;
+        flex: 1;
       }
 
       .nav-section {
@@ -98,11 +99,40 @@
         background: rgba(255, 255, 255, 0.55);
       }
 
+      .nav-section.ateliers {
+        width: 100%;
+      }
+
+      .nav-section.ateliers .nav {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .nav-section.ateliers .push-right {
+        margin-left: auto;
+      }
+
       .nav-label {
         font-size: 0.7rem;
         letter-spacing: 0.14em;
         text-transform: uppercase;
         color: var(--muted);
+      }
+
+      .subnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 24px;
+      }
+
+      .subnav a {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(226, 111, 74, 0.15);
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
       }
 
       .hero {
@@ -244,7 +274,16 @@
         }
 
         .nav-wrap {
+          grid-template-columns: 1fr;
+          justify-items: center;
+        }
+
+        .nav-section {
           justify-content: center;
+        }
+
+        .nav-section.ateliers .push-right {
+          margin-left: 0;
         }
       }
     </style>
@@ -254,7 +293,7 @@
       <header>
         <a class="logo" href="index.html">TNS FabLab</a>
         <div class="nav-wrap">
-          <div class="nav-section">
+          <div class="nav-section infos">
             <span class="nav-label">Infos</span>
             <nav class="nav">
               <a href="index.html">Accueil</a>
@@ -262,12 +301,12 @@
               <a href="glossaire.html">Glossaire</a>
             </nav>
           </div>
-          <div class="nav-section">
+          <div class="nav-section ateliers">
             <span class="nav-label">Ateliers</span>
             <nav class="nav">
               <a href="personnaliser.html">Personnaliser</a>
-              <a href="rendezvous.html">Rendez-vous</a>
               <a href="exemples/claire-location/index.html" target="_blank" rel="noopener">Site Claire</a>
+              <a class="push-right" href="rendezvous.html">Rendez-vous</a>
             </nav>
           </div>
         </div>
@@ -293,6 +332,11 @@
             <p>La cohérence vaut mieux que la dispersion.</p>
           </div>
         </section>
+
+        <div class="subnav">
+          <a href="#templates">Templates</a>
+          <a href="#outils">Outils</a>
+        </div>
 
         <section id="templates">
           <h2 class="section-title">Templates (Google Sheets + Markdown)</h2>
