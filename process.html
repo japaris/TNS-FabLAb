@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Ressources - TNS FabLab</title>
+    <title>Process A a Z - TNS FabLab</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@300;400;500;600&display=swap" />
     <style>
       :root {
@@ -114,22 +114,6 @@
         color: var(--muted);
       }
 
-      .subnav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 0 0 24px;
-      }
-
-      .subnav a {
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(226, 111, 74, 0.15);
-        color: var(--accent);
-        font-weight: 600;
-        font-size: 0.9rem;
-      }
-
       .hero {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -150,30 +134,6 @@
         line-height: 1.6;
       }
 
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        padding: 11px 20px;
-        border-radius: 999px;
-        background: var(--accent);
-        color: #fff;
-        font-weight: 600;
-        box-shadow: 0 14px 24px -16px rgba(226, 111, 74, 0.8);
-      }
-
-      .cta.secondary {
-        background: var(--accent-2);
-        box-shadow: 0 14px 24px -16px rgba(46, 139, 125, 0.7);
-      }
-
-      .cta-group {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: center;
-      }
-
       .hero-card {
         background: var(--glass);
         border-radius: 22px;
@@ -188,10 +148,89 @@
         font-family: "Fraunces", Georgia, serif;
       }
 
+      .subnav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 0 24px;
+      }
+
+      .subnav a {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(226, 111, 74, 0.15);
+        color: var(--accent);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
       .section-title {
         font-family: "Fraunces", Georgia, serif;
         font-size: 1.6rem;
         margin: 0 0 16px;
+      }
+
+      .timeline {
+        position: relative;
+        display: grid;
+        gap: 18px;
+        margin-top: 12px;
+      }
+
+      .timeline::before {
+        content: "";
+        position: absolute;
+        left: 12px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: rgba(46, 139, 125, 0.3);
+      }
+
+      .step {
+        position: relative;
+        padding: 16px 18px 16px 36px;
+        background: var(--glass);
+        border-radius: 18px;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        box-shadow: 0 18px 34px -28px var(--shadow);
+      }
+
+      .step::before {
+        content: "";
+        position: absolute;
+        left: 5px;
+        top: 22px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: var(--accent-2);
+        box-shadow: 0 0 0 4px rgba(46, 139, 125, 0.2);
+      }
+
+      .step h4 {
+        margin: 0 0 8px;
+        font-family: "Fraunces", Georgia, serif;
+      }
+
+      .step p {
+        margin: 0 0 8px;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .list {
+        padding-left: 18px;
+        margin: 0;
+        color: var(--muted);
+      }
+
+      .note {
+        background: rgba(243, 194, 107, 0.2);
+        border-radius: 14px;
+        padding: 14px 16px;
+        color: #6b512d;
+        font-size: 0.95rem;
       }
 
       .grid {
@@ -211,43 +250,6 @@
       .card h4 {
         margin: 0 0 8px;
         font-family: "Fraunces", Georgia, serif;
-      }
-
-      .card p,
-      .card li {
-        margin: 0 0 8px;
-        color: var(--muted);
-        line-height: 1.5;
-      }
-
-      .list {
-        padding-left: 18px;
-        margin: 0;
-      }
-
-      .note {
-        background: rgba(243, 194, 107, 0.2);
-        border-radius: 14px;
-        padding: 14px 16px;
-        color: #6b512d;
-        font-size: 0.95rem;
-      }
-
-      .download {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-        margin-top: 10px;
-      }
-
-      .download a {
-        padding: 8px 14px;
-        border-radius: 999px;
-        background: rgba(46, 139, 125, 0.15);
-        color: var(--accent-2);
-        font-weight: 600;
-        font-size: 0.9rem;
       }
 
       .footer {
@@ -280,6 +282,18 @@
         .nav-section.ateliers .push-right {
           margin-left: 0;
         }
+
+        .timeline::before {
+          left: 6px;
+        }
+
+        .step {
+          padding-left: 30px;
+        }
+
+        .step::before {
+          left: 0;
+        }
       }
     </style>
   </head>
@@ -294,7 +308,6 @@
               <a href="index.html">Accueil</a>
               <a href="ressources.html">Ressources</a>
               <a href="glossaire.html">Glossaire</a>
-              <a href="process.html">Process A a Z</a>
             </nav>
           </div>
           <div class="nav-section ateliers">
@@ -311,155 +324,180 @@
       <main>
         <section class="hero">
           <div>
-            <h1>Ressources et templates utiles pour les ateliers.</h1>
+            <h1>Creer un site de A a Z, avec methode.</h1>
             <p>
-              Modèles prêts à l'emploi (Google Sheets), liste d'outils et bonnes pratiques.
-              Choisissez un outil par catégorie, puis avancez sans vous disperser.
+              Un parcours complet du nom de domaine a la mise en ligne, avec les bonnes
+              questions au bon moment pour aligner strategie et execution.
             </p>
-            <div class="cta-group">
-              <a class="cta" href="#templates">Télécharger les modèles</a>
-              <a class="cta secondary" href="glossaire.html">Voir le glossaire</a>
-              <a class="cta secondary" href="index.html">Retour à l'accueil</a>
-            </div>
           </div>
           <div class="hero-card">
-            <h3>Principe de base</h3>
-            <p>Je travaille avec GitHub, mais l'important est d'en choisir un et de s'y tenir.</p>
-            <p>La cohérence vaut mieux que la dispersion.</p>
+            <h3>Idee centrale</h3>
+            <p>Un site reussi sert un objectif clair, pas uniquement un design joli.</p>
+            <p>On avance en etapes, sans sauter les fondations.</p>
           </div>
         </section>
 
         <div class="subnav">
-          <a href="#templates">Templates</a>
-          <a href="#outils">Outils</a>
+          <a href="#strategie">Strategie</a>
+          <a href="#timeline">Timeline</a>
+          <a href="#maintenance">Maintenance</a>
         </div>
 
-        <section id="templates">
-          <h2 class="section-title">Templates (Google Sheets + Markdown)</h2>
+        <section id="strategie">
+          <h2 class="section-title">Strategie avant tactique</h2>
           <div class="grid">
             <article class="card">
-              <h4>Suivi des charges</h4>
-              <p>Abonnements, coûts, temps passé, valeur perçue et décisions.</p>
-              <div class="download">
-                <a href="ressources/templates/charges-template.csv">CSV (Google Sheets)</a>
-                <a href="ressources/templates/charges-template.md">Markdown</a>
-              </div>
+              <h4>Pourquoi ce site ?</h4>
+              <p>Informer, rassurer, vendre, recruter, convertir, generer des contacts ?</p>
             </article>
             <article class="card">
-              <h4>Accès & comptes</h4>
-              <p>Suivi des logins sans stocker les mots de passe.</p>
-              <div class="download">
-                <a href="ressources/templates/logins-template.csv">CSV (Google Sheets)</a>
-                <a href="ressources/templates/logins-template.md">Markdown</a>
-              </div>
+              <h4>Pour qui ?</h4>
+              <p>Public principal, niveau de maturite, objections, questions frequentes.</p>
             </article>
             <article class="card">
-              <h4>Liens vers les outils</h4>
-              <p>Rassemble toutes les URLs utiles par catégorie.</p>
-              <div class="download">
-                <a href="ressources/templates/liens-template.csv">CSV (Google Sheets)</a>
-                <a href="ressources/templates/liens-template.md">Markdown</a>
-              </div>
+              <h4>Quel succes ?</h4>
+              <p>Un contact ? Une reservation ? Une inscription ? Un achat ?</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="timeline" style="margin-top: 32px;">
+          <h2 class="section-title">Timeline A–Z</h2>
+          <div class="timeline">
+            <article class="step">
+              <h4>1. Clarifier l'objectif</h4>
+              <p>Qu'est-ce que le site doit faire, precisement ?</p>
+              <ul class="list">
+                <li>Objectif principal et objectif secondaire</li>
+                <li>Message cle en une phrase</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>2. Definir le contenu</h4>
+              <p>Quelles pages sont indispensables pour convaincre ?</p>
+              <ul class="list">
+                <li>Accueil, offre, preuves, contact</li>
+                <li>Photos, FAQ, calendrier si besoin</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>3. Choisir le nom de domaine</h4>
+              <p>Simple, lisible, memoire, coherent avec le projet.</p>
+              <ul class="list">
+                <li>.fr ou .com ?</li>
+                <li>Eviter les tirets si possible</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>4. Choisir l'outil</h4>
+              <p>En fonction du temps, du budget et de la maintenance.</p>
+              <ul class="list">
+                <li>No-code (Wix, WordPress.com)</li>
+                <li>Statique (GitHub Pages, Netlify)</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>5. Concevoir l'architecture</h4>
+              <p>Plan des pages et navigation claire.</p>
+              <ul class="list">
+                <li>1 page = 1 intention</li>
+                <li>Limiter le menu a 5-7 liens</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>6. Rediger les textes</h4>
+              <p>Parler des besoins du visiteur, pas de soi.</p>
+              <ul class="list">
+                <li>Titres clairs, phrases courtes</li>
+                <li>Preuves (avis, photos, chiffres)</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>7. Construire le site</h4>
+              <p>Integrer contenu + visuels + appels a l'action.</p>
+              <ul class="list">
+                <li>Test mobile obligatoire</li>
+                <li>Temps de chargement</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>8. Brancher les outils</h4>
+              <p>Formulaire, calendrier, newsletter, paiement.</p>
+              <ul class="list">
+                <li>Verification des liens</li>
+                <li>Notification email active</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>9. Publier</h4>
+              <p>Connexion du domaine et mise en ligne.</p>
+              <ul class="list">
+                <li>DNS OK, HTTPS actif</li>
+                <li>Partager le lien</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>10. Optimiser le SEO</h4>
+              <p>Le minimum vital pour etre trouve.</p>
+              <ul class="list">
+                <li>Titre de page + description</li>
+                <li>Texte clair, mots cles naturels</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>11. Mesurer et ajuster</h4>
+              <p>Ecouter les retours et ameliorer.</p>
+              <ul class="list">
+                <li>Questions des visiteurs</li>
+                <li>Pages a simplifier</li>
+              </ul>
+            </article>
+            <article class="step">
+              <h4>12. Mettre a jour</h4>
+              <p>Un site vivant rassure et convertit mieux.</p>
+              <ul class="list">
+                <li>Photos recentes</li>
+                <li>Infos a jour (prix, dates)</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section id="maintenance" style="margin-top: 32px;">
+          <h2 class="section-title">Maintenance & rythme</h2>
+          <div class="grid">
+            <article class="card">
+              <h4>Mensuel</h4>
+              <ul class="list">
+                <li>Verifier formulaire et calendrier</li>
+                <li>Corriger liens casses</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Trimestriel</h4>
+              <ul class="list">
+                <li>Mettre a jour les photos</li>
+                <li>Relire les pages cles</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h4>Annuel</h4>
+              <ul class="list">
+                <li>Renouveler le domaine</li>
+                <li>Revoir la strategie</li>
+              </ul>
             </article>
           </div>
         </section>
 
         <section class="note" style="margin-top: 18px;">
-          Pour importer un modèle : Google Sheets → Fichier → Importer → Télécharger.
-          Supprimez la ligne d'exemple après import.
-        </section>
-
-        <section class="note" style="margin-top: 12px;">
-          Les versions Markdown peuvent être collées dans Apple Notes ou importées dans Notion.
-        </section>
-
-        <section class="note" style="margin-top: 12px;">
-          Ne stockez jamais vos mots de passe dans un fichier. Utilisez un gestionnaire
-          (ex : Bitwarden, 1Password, iCloud).
-        </section>
-
-        <section id="outils" style="margin-top: 32px;">
-          <h2 class="section-title">Panorama d'outils (2 à 3 options)</h2>
-          <div class="grid">
-            <article class="card">
-              <h4>Git & hébergement</h4>
-              <p>Git est l'outil, GitHub/GitLab/Bitbucket sont des plateformes.</p>
-              <ul class="list">
-                <li>GitHub (mon choix)</li>
-                <li>GitLab</li>
-                <li>Bitbucket</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Création de site (no-code)</h4>
-              <ul class="list">
-                <li>Wix</li>
-                <li>WordPress.com</li>
-                <li>Webflow</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Publication statique</h4>
-              <ul class="list">
-                <li>GitHub Pages</li>
-                <li>Netlify</li>
-                <li>Vercel</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Outils IA pour dev</h4>
-              <ul class="list">
-                <li>Cursor</li>
-                <li>Lovable</li>
-                <li>Bolt.new</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Formulaires & contact</h4>
-              <ul class="list">
-                <li>Google Forms</li>
-                <li>Tally</li>
-                <li>Formspree</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Bases de données</h4>
-              <ul class="list">
-                <li>Supabase</li>
-                <li>Firebase</li>
-                <li>Neon</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Calendrier & rendez-vous</h4>
-              <ul class="list">
-                <li>Google Calendar</li>
-                <li>Cal.com</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Newsletter</h4>
-              <ul class="list">
-                <li>Substack</li>
-                <li>Beehiiv</li>
-                <li>MailerLite</li>
-              </ul>
-            </article>
-            <article class="card">
-              <h4>Documentation & notes</h4>
-              <ul class="list">
-                <li>Notion</li>
-                <li>Obsidian</li>
-                <li>Apple Notes</li>
-              </ul>
-            </article>
-          </div>
+          Astuce : gardez une liste des decisions prises (outil, hebergeur, acces) pour ne pas repartir de zero.
         </section>
       </main>
 
       <footer class="footer">
-        <span>TNS FabLab - Ressources</span>
-        <span>Mis à jour en 2026</span>
+        <span>TNS FabLab - Process</span>
+        <span>Mis a jour en 2026</span>
         <a href="privacy.html">Confidentialite (RGPD)</a>
       </footer>
     </div>
