@@ -8,6 +8,7 @@ avec leurs propres projets, en partant d'exemples simples et modifiables.
 - Accueil (GitHub Pages) : https://japaris.github.io/TNS-FabLAb/
 - Exemple Claire : https://japaris.github.io/TNS-FabLAb/exemples/claire-location/
 - Ressources : https://japaris.github.io/TNS-FabLAb/ressources.html
+- Glossaire : https://japaris.github.io/TNS-FabLAb/glossaire.html
 
 ## Contenu
 - exemples/ : mini projets à copier et personnaliser

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Glossaire - TNS FabLab</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@300;400;500;600&display=swap" />
+    <style>
+      :root {
+        --ink: #1d2528;
+        --muted: #627078;
+        --paper: #f7f2eb;
+        --accent: #e26f4a;
+        --accent-2: #2e8b7d;
+        --sun: #f3c26b;
+        --glass: rgba(255, 255, 255, 0.78);
+        --shadow: rgba(24, 32, 36, 0.18);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Manrope", "Trebuchet MS", sans-serif;
+        color: var(--ink);
+        background: radial-gradient(circle at 10% 20%, #ffe6d2 0%, transparent 45%),
+          radial-gradient(circle at 90% 10%, #d7f1ed 0%, transparent 40%),
+          linear-gradient(160deg, #fff6ee 0%, #f2f5f3 55%, #f1eee7 100%);
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: radial-gradient(circle at 20% 20%, rgba(46, 139, 125, 0.08) 0 2px, transparent 2px 26px);
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        padding: 32px 6vw 56px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        font-family: "Fraunces", Georgia, serif;
+        font-weight: 700;
+        font-size: 1.4rem;
+        letter-spacing: 0.02em;
+      }
+
+      .nav {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+
+      .nav a {
+        padding: 6px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.6);
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 28px;
+        margin: 36px 0 24px;
+        align-items: center;
+      }
+
+      .hero h1 {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: clamp(2.2rem, 3vw, 3.2rem);
+        margin: 0 0 12px;
+      }
+
+      .hero p {
+        margin: 0 0 18px;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 11px 20px;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+        box-shadow: 0 14px 24px -16px rgba(226, 111, 74, 0.8);
+      }
+
+      .cta.secondary {
+        background: var(--accent-2);
+        box-shadow: 0 14px 24px -16px rgba(46, 139, 125, 0.7);
+      }
+
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .hero-card {
+        background: var(--glass);
+        border-radius: 22px;
+        padding: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        box-shadow: 0 18px 36px -28px var(--shadow);
+        backdrop-filter: blur(8px);
+      }
+
+      .hero-card h3 {
+        margin: 0 0 10px;
+        font-family: "Fraunces", Georgia, serif;
+      }
+
+      .section-title {
+        font-family: "Fraunces", Georgia, serif;
+        font-size: 1.6rem;
+        margin: 0 0 16px;
+      }
+
+      .glossary {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+      }
+
+      .term {
+        background: var(--glass);
+        border-radius: 18px;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.65);
+        box-shadow: 0 18px 34px -28px var(--shadow);
+      }
+
+      .term h4 {
+        margin: 0 0 8px;
+        font-family: "Fraunces", Georgia, serif;
+      }
+
+      .term p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.5;
+      }
+
+      .note {
+        background: rgba(243, 194, 107, 0.2);
+        border-radius: 14px;
+        padding: 14px 16px;
+        color: #6b512d;
+        font-size: 0.95rem;
+        margin-top: 18px;
+      }
+
+      .footer {
+        margin-top: 48px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(29, 37, 40, 0.1);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: space-between;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 700px) {
+        header {
+          justify-content: center;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <div class="logo">TNS FabLab</div>
+        <nav class="nav">
+          <a href="index.html">Accueil</a>
+          <a href="ressources.html">Ressources</a>
+          <a href="personnaliser.html">Personnaliser</a>
+          <a href="rendezvous.html">Rendez-vous</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div>
+            <h1>Glossaire A–Z des termes utiles.</h1>
+            <p>
+              Définitions courtes et accessibles pour s'y retrouver pendant les ateliers.
+              Les termes sont classés par ordre alphabétique.
+            </p>
+            <div class="cta-group">
+              <a class="cta" href="ressources.html">Voir les ressources</a>
+              <a class="cta secondary" href="index.html">Retour à l'accueil</a>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h3>Conseil pratique</h3>
+            <p>Choisissez un outil par catégorie et restez cohérent sur vos choix.</p>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="section-title">Glossaire</h2>
+          <div class="glossary">
+            <article class="term">
+              <h4>Android Studio</h4>
+              <p>Environnement de développement officiel pour créer des apps Android.</p>
+            </article>
+            <article class="term">
+              <h4>App Store Connect</h4>
+              <p>Portail Apple pour publier et gérer des apps iOS/macOS.</p>
+            </article>
+            <article class="term">
+              <h4>API</h4>
+              <p>Interface qui permet à deux services d'échanger des données.</p>
+            </article>
+            <article class="term">
+              <h4>Architectures d'app (MVC, MVP, MVVM)</h4>
+              <p>Façons d'organiser le code d'une application pour la rendre maintenable.</p>
+            </article>
+            <article class="term">
+              <h4>Backend</h4>
+              <p>Partie "serveur" d'un produit (données, logique, sécurité).</p>
+            </article>
+            <article class="term">
+              <h4>CDN</h4>
+              <p>Réseau de serveurs qui accélère la livraison d'un site partout dans le monde.</p>
+            </article>
+            <article class="term">
+              <h4>Cloudflare</h4>
+              <p>Service de CDN, sécurité et performances pour sites web.</p>
+            </article>
+            <article class="term">
+              <h4>Cloudflare Pages</h4>
+              <p>Service Cloudflare pour publier des sites statiques.</p>
+            </article>
+            <article class="term">
+              <h4>CMS</h4>
+              <p>Outil pour gérer le contenu d'un site sans coder (ex : WordPress).</p>
+            </article>
+            <article class="term">
+              <h4>CSS</h4>
+              <p>Langage qui gère l'apparence d'un site (couleurs, typographies, mise en page).</p>
+            </article>
+            <article class="term">
+              <h4>Cursor</h4>
+              <p>Éditeur de code avec fonctionnalités d'IA intégrées.</p>
+            </article>
+            <article class="term">
+              <h4>DNS</h4>
+              <p>Système qui relie un nom de domaine à une adresse IP.</p>
+            </article>
+            <article class="term">
+              <h4>DNSSEC</h4>
+              <p>Sécurisation du DNS pour éviter les détournements.</p>
+            </article>
+            <article class="term">
+              <h4>Frontend</h4>
+              <p>Partie visible d'un produit (interface et expérience utilisateur).</p>
+            </article>
+            <article class="term">
+              <h4>Git</h4>
+              <p>Outil de versioning pour suivre l'historique des fichiers.</p>
+            </article>
+            <article class="term">
+              <h4>GitHub</h4>
+              <p>Plateforme d'hébergement de code basée sur Git.</p>
+            </article>
+            <article class="term">
+              <h4>GitHub Pages</h4>
+              <p>Service GitHub pour publier des sites statiques.</p>
+            </article>
+            <article class="term">
+              <h4>Google Play Console</h4>
+              <p>Portail Google pour publier et gérer des apps Android (ex: Android Play Console).</p>
+            </article>
+            <article class="term">
+              <h4>Hébergement</h4>
+              <p>Service qui met un site en ligne sur des serveurs accessibles.</p>
+            </article>
+            <article class="term">
+              <h4>HTML</h4>
+              <p>Langage qui structure le contenu d'une page web.</p>
+            </article>
+            <article class="term">
+              <h4>HTTP/HTTPS</h4>
+              <p>Protocoles de communication web, HTTPS ajoute un chiffrement.</p>
+            </article>
+            <article class="term">
+              <h4>IA en mode agent</h4>
+              <p>IA capable d'enchaîner des tâches avec une certaine autonomie.</p>
+            </article>
+            <article class="term">
+              <h4>Java</h4>
+              <p>Langage utilisé notamment pour des applications et Android.</p>
+            </article>
+            <article class="term">
+              <h4>JavaScript</h4>
+              <p>Langage qui rend un site interactif.</p>
+            </article>
+            <article class="term">
+              <h4>Kotlin</h4>
+              <p>Langage moderne recommandé pour Android.</p>
+            </article>
+            <article class="term">
+              <h4>Nom de domaine</h4>
+              <p>Adresse web lisible (ex : monsite.fr).</p>
+            </article>
+            <article class="term">
+              <h4>OVH</h4>
+              <p>Fournisseur d'hébergement et de noms de domaine.</p>
+            </article>
+            <article class="term">
+              <h4>Programmation orientée objet</h4>
+              <p>Façon d'organiser le code autour d'objets et de classes.</p>
+            </article>
+            <article class="term">
+              <h4>SEA</h4>
+              <p>Publicité payante sur les moteurs de recherche.</p>
+            </article>
+            <article class="term">
+              <h4>SEO</h4>
+              <p>Optimisation pour être mieux référencé sur Google.</p>
+            </article>
+            <article class="term">
+              <h4>SSL/TLS</h4>
+              <p>Chiffrement des échanges web (cadenas dans le navigateur).</p>
+            </article>
+            <article class="term">
+              <h4>Swift</h4>
+              <p>Langage moderne d'Apple pour iOS/macOS.</p>
+            </article>
+            <article class="term">
+              <h4>SwiftUI</h4>
+              <p>Framework Apple pour créer des interfaces iOS/macOS.</p>
+            </article>
+            <article class="term">
+              <h4>VPS</h4>
+              <p>Serveur privé virtuel, plus flexible qu'un hébergement mutualisé.</p>
+            </article>
+            <article class="term">
+              <h4>VS Code</h4>
+              <p>Éditeur de code léger et très populaire.</p>
+            </article>
+            <article class="term">
+              <h4>Xcode</h4>
+              <p>Environnement officiel Apple pour développer des apps iOS/macOS.</p>
+            </article>
+            <article class="term">
+              <h4>Xcode Cloud</h4>
+              <p>Service Apple pour automatiser les builds et tests.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="note">
+          Besoin d'ajouter un terme ? Notez-le pendant l'atelier et on l'ajoutera au glossaire.
+        </section>
+      </main>
+
+      <footer class="footer">
+        <span>TNS FabLab - Glossaire</span>
+        <span>Mis à jour en 2026</span>
+      </footer>
+    </div>
+  </body>
+</html>
