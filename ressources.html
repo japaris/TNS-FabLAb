@@ -82,6 +82,29 @@
         background: rgba(255, 255, 255, 0.6);
       }
 
+      .nav-wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        justify-content: flex-end;
+      }
+
+      .nav-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.55);
+      }
+
+      .nav-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
       .hero {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -219,21 +242,35 @@
           justify-content: center;
           text-align: center;
         }
+
+        .nav-wrap {
+          justify-content: center;
+        }
       }
     </style>
   </head>
   <body>
     <div class="page">
       <header>
-        <div class="logo">TNS FabLab</div>
-        <nav class="nav">
-          <a href="index.html">Accueil</a>
-          <a href="personnaliser.html">Personnaliser</a>
-          <a href="rendezvous.html">Rendez-vous</a>
-          <a href="glossaire.html">Glossaire</a>
-          <a href="#templates">Templates</a>
-          <a href="#outils">Outils</a>
-        </nav>
+        <a class="logo" href="index.html">TNS FabLab</a>
+        <div class="nav-wrap">
+          <div class="nav-section">
+            <span class="nav-label">Infos</span>
+            <nav class="nav">
+              <a href="index.html">Accueil</a>
+              <a href="ressources.html">Ressources</a>
+              <a href="glossaire.html">Glossaire</a>
+            </nav>
+          </div>
+          <div class="nav-section">
+            <span class="nav-label">Ateliers</span>
+            <nav class="nav">
+              <a href="personnaliser.html">Personnaliser</a>
+              <a href="rendezvous.html">Rendez-vous</a>
+              <a href="exemples/claire-location/index.html" target="_blank" rel="noopener">Site Claire</a>
+            </nav>
+          </div>
+        </div>
       </header>
 
       <main>
