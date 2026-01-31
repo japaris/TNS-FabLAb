@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernard E. LE MOINE - Profil Professionnel</title>
+    <meta name="description" content="Profil professionnel de Bernard E. LE MOINE, offrant des services aux entreprises.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div>
+                <h1 class="text-2xl font-bold">Bernard E. LE MOINE</h1>
+                <p class="text-sm text-gray-600">Consultant en Stratégie et Opérations</p>
+            </div>
+            <div>
+                <a href="/site/en.html" class="text-sm font-medium text-gray-700 hover:text-gray-900">EN</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section id="hero" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-2">Accélérateur de votre croissance d'entreprise</h2>
+            <p class="text-lg text-gray-600 mb-8">Optimisation des processus et stratégies de développement.</p>
+            <a href="#contact" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">Contactez-moi</a>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2">
+                <img src="assets/images/profile.jpg" alt="Bernard E. LE MOINE" class="rounded-full mx-auto md:mx-0">
+            </div>
+            <div class="md:w-1/2 md:pl-10 mt-10 md:mt-0">
+                <h3 class="text-3xl font-bold mb-4">À propos de moi</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Avec plus de 20 ans d'expérience dans le conseil, j'aide les entreprises à surmonter leurs défis complexes et à atteindre leurs objectifs stratégiques. Mon approche est axée sur les résultats, la collaboration et l'innovation.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-12">Mes Services</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold mb-2">Conseil en Stratégie</h4>
+                    <p>Développement de stratégies de croissance, analyse de marché et positionnement concurrentiel.</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold mb-2">Optimisation des Opérations</h4>
+                    <p>Amélioration des processus, réduction des coûts et augmentation de l'efficacité opérationnelle.</p>
+                </div>
+                <div class="bg-gray-100 p-8 rounded-lg">
+                    <h4 class="text-xl font-bold mb-2">Gestion de Projet</h4>
+                    <p>Pilotage de projets complexes, de la planification à la mise en œuvre, en garantissant le respect des délais et du budget.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-8">Mon CV</h3>
+            <div class="flex justify-center gap-4">
+                <a href="cv/cv-bernard-fr.pdf" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">Télécharger PDF</a>
+                <a href="cv/cv-bernard-fr.docx" class="bg-gray-700 text-white font-bold py-2 px-4 rounded hover:bg-gray-800">Télécharger Word</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold text-center mb-8">Contact</h3>
+            <form action="https://formspree.io/f/{your_form_id}" method="POST" class="max-w-xl mx-auto">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nom</label>
+                    <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
+                    <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
+                    <textarea id="message" name="message" required rows="4" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">Envoyer</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Prise de rendez-vous -->
+    <section id="appointment" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold mb-8">Prendre un rendez-vous</h3>
+            <a href="https://calendly.com/bernard-le-moine" target="_blank" class="bg-green-500 text-white font-bold py-3 px-6 rounded-full hover:bg-green-600 text-lg">
+                Réserver un appel
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2026 Bernard E. LE MOINE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
